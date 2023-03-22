@@ -1,0 +1,31 @@
+﻿{
+  "name": "ASTU CreditHour Checker",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "This extention is develped for ASTU students to check their CreditHour before graduation",
+  "permissions": ["tabs","scripting"],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "host_permissions":[
+    "https://*/*",
+    "http://*/*"
+  ],
+
+  "browser_action": {
+    "default_icon": "index.png",
+    "default_title": "I am Chapter 4",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://10.240.1.89/academic_history"],
+      "js": ["matches.js"]
+    }
+  ]
+}
+
